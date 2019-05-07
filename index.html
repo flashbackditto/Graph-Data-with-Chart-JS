@@ -16,6 +16,9 @@
   <script>
     let myChart = document.getElementById('myChart').getContext('2d');
 
+    //Global options
+    Chart.defaults.global.defaultFontSize = 15;
+
     let caPopChart = new Chart(myChart, {
       type:'bar', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
@@ -37,12 +40,35 @@
         'blue',
         'orange',
         'purple'
-
       ],
-      
+      borderWidth:2,
+      borderColor: 'gray',
+      hoverBorderWidth: 3,
+      hoverBorderColor: 'black'
         }]
       },
-      options:{}
+      options:{
+        title:{
+          display:true,
+          text:'Largest Cities In California',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels: {
+            fontColor:'black'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom: 0,
+            top:0
+          }
+        }
+      }
       });
   </script>
 
