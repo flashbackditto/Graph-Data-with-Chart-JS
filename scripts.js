@@ -212,7 +212,7 @@ pointBackgroundColor: 'rgba(75, 192, 192, 0.2)'
         options:{
           title:{
             display:true,
-            text:'Largest Cities In California',
+            text:'Median Annual Rent vs. Average Annual Income',
             fontSize:25
           },
           legend:{
