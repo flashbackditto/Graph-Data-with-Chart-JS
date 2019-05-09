@@ -77,36 +77,38 @@
           48600,
           56943
         ],
-      backgroundColor: 'rgba(75, 192, 192, 0.2)',
+      backgroundColor: 'rgba(33, 186, 94, 0.4)',
       borderWidth:2,
-      borderColor: 'gray',
+      borderColor: 'rgba(40, 167, 108, 0.9)',
       hoverBorderWidth: 3,
       hoverBorderColor: 'black',
       pointRadius: 4,
       pointHoverRadius: 5,
-      pointBorderColor:'rgba(78, 60, 156, 0.9)',
-      pointBackgroundColor: 'rgba(75, 192, 192, 0.2)'
+      pointBorderColor:'rgba(19, 147, 70, 0.9)',
+      pointBackgroundColor: 'rgba(252, 255, 237, 0.7)',
+      pointHoverBackgroundColor: 'rgba(247, 255, 70, 0.9)'
     },
     {
-    label:'Population',
-    data:[
-      3792621,
-      1307402,
-      945942,
-      805235,
-      494665,
-      466488
-  ],
-backgroundColor: 'rgba(75, 192, 192, 0.2)',
-borderWidth:2,
-borderColor: 'gray',
-hoverBorderWidth: 3,
-hoverBorderColor: 'black',
-pointRadius: 4,
-pointHoverRadius: 5,
-pointBorderColor:'rgba(78, 60, 156, 0.9)',
-pointBackgroundColor: 'rgba(75, 192, 192, 0.2)'
-},
+              label:'Population',
+              data:[
+                3792621,
+                1307402,
+                945942,
+                805235,
+                494665,
+                466488
+            ],
+          backgroundColor: 'rgba(75, 192, 192, 0.3)',
+          borderWidth:2,
+          borderColor: 'rgba(98, 80, 196, 0.9)',
+          hoverBorderWidth: 3,
+          hoverBorderColor: 'black',
+          pointRadius: 4,
+          pointHoverRadius: 5,
+          pointBorderColor:'rgba(78, 60, 156, 0.9)',
+          pointBackgroundColor: 'rgba(252, 255, 237, 0.7)',
+          pointHoverBackgroundColor: 'rgba(247, 255, 70, 0.9)'
+          },
           {
           label:'Median Home Price',
           data:[
@@ -117,15 +119,16 @@ pointBackgroundColor: 'rgba(75, 192, 192, 0.2)'
           280000,
           365000
         ],
-      backgroundColor: 'rgba(192, 0, 0, 0.2)',
+      backgroundColor: 'rgba(192, 0, 0, 0.4)',
       borderWidth:2,
-      borderColor: 'gray',
+      borderColor: 'rgba(211, 65, 65, 0.9)',
       hoverBorderWidth: 3,
       hoverBorderColor: 'black',
       pointRadius: 4,
       pointHoverRadius: 5,
       pointBorderColor:'rgba(145, 0, 0, 0.9)',
-      pointBackgroundColor: 'rgba(192, 0, 0, 0.2)'
+      pointBackgroundColor: 'rgba(252, 255, 237, 0.7)',
+      pointHoverBackgroundColor: 'rgba(247, 255, 70, 0.9)'
         }
        ]
       },
@@ -177,15 +180,16 @@ pointBackgroundColor: 'rgba(75, 192, 192, 0.2)'
             48600,
             56943
           ],
-        backgroundColor: 'rgba(192, 0, 0, 0.2)',
-        borderWidth:2,
-        borderColor: 'gray',
-        hoverBorderWidth: 3,
-        hoverBorderColor: 'black',
-        pointRadius: 5,
-        pointHoverRadius: 7,
-        pointBorderColor:'rgba(145, 0, 0, 0.9)',
-        pointBackgroundColor: 'rgba(192, 0, 0, 0.2)'
+          backgroundColor: 'rgba(192, 0, 0, 0.4)',
+          borderWidth:2,
+          borderColor: 'rgba(211, 65, 65, 0.9)',
+          hoverBorderWidth: 3,
+          hoverBorderColor: 'black',
+          pointRadius: 4,
+          pointHoverRadius: 5,
+          pointBorderColor:'rgba(145, 0, 0, 0.9)',
+          pointBackgroundColor: 'rgba(252, 255, 237, 0.7)',
+          pointHoverBackgroundColor: 'rgba(247, 255, 70, 0.9)'
       },
       {
       label:'Average Annual Rent',
@@ -197,15 +201,16 @@ pointBackgroundColor: 'rgba(75, 192, 192, 0.2)'
         12540,
         16356
     ],
-  backgroundColor: 'rgba(75, 192, 192, 0.5)',
-  borderWidth:2,
-  borderColor: 'gray',
-  hoverBorderWidth: 3,
-  hoverBorderColor: 'black',
-  pointRadius: 5,
-  pointHoverRadius: 7,
-  pointBorderColor:'rgba(78, 60, 156, 0.9)',
-  pointBackgroundColor: 'rgba(75, 192, 192, 0.2)'
+    backgroundColor: 'rgba(75, 192, 192, 0.3)',
+    borderWidth:2,
+    borderColor: 'rgba(98, 80, 196, 0.9)',
+    hoverBorderWidth: 3,
+    hoverBorderColor: 'black',
+    pointRadius: 4,
+    pointHoverRadius: 5,
+    pointBorderColor:'rgba(78, 60, 156, 0.9)',
+    pointBackgroundColor: 'rgba(252, 255, 237, 0.9)',
+    pointHoverBackgroundColor: 'rgba(247, 255, 70, 0.9)'
   }
          ]
         },
