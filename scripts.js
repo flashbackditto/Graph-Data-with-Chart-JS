@@ -1,6 +1,22 @@
 
   let myChart = document.getElementById('myChart').getContext('2d');
 
+  let request = new XMLHttpRequest();
+  let API_Key = "9wBvaArNUU45cBCLIDJloq11LmH7nQQcEggnp3J9KFF0Wmm5ypZK8V53locn";
+
+  
+  request.open('GET',`https://www.worldtradingdata.com/api/v1/history?symbol=AAPL&sort=newest&api_token=${API_Key}`, true);
+
+  request.onload = function () {
+    if(this.status === 200) {
+
+      let data = JSON.parse(request.response);
+      console.log(data);
+    }
+  }
+
+  request.send();
+
   //Global options
   Chart.defaults.global.defaultFontSize = 15;
 
@@ -162,6 +178,7 @@
 
       let rentIncomeChart = document.getElementById('rInChart').getContext('2d');
 
+
       //Global options
       Chart.defaults.global.defaultFontSize = 15;
 
@@ -180,15 +197,15 @@
             48600,
             56943
           ],
-          backgroundColor: 'rgba(192, 0, 0, 0.4)',
+          backgroundColor: 'rgba(75, 192, 192, 0.3)',
           borderWidth:2,
-          borderColor: 'rgba(211, 65, 65, 0.9)',
+          borderColor: 'rgba(98, 80, 196, 0.9)',
           hoverBorderWidth: 3,
           hoverBorderColor: 'black',
           pointRadius: 4,
           pointHoverRadius: 5,
-          pointBorderColor:'rgba(145, 0, 0, 0.9)',
-          pointBackgroundColor: 'rgba(252, 255, 237, 0.7)',
+          pointBorderColor:'rgba(78, 60, 156, 0.9)',
+          pointBackgroundColor: 'rgba(252, 255, 237, 0.9)',
           pointHoverBackgroundColor: 'rgba(247, 255, 70, 0.9)'
       },
       {
@@ -201,16 +218,17 @@
         12540,
         16356
     ],
-    backgroundColor: 'rgba(75, 192, 192, 0.3)',
+    backgroundColor: 'rgba(192, 0, 0, 0.4)',
     borderWidth:2,
-    borderColor: 'rgba(98, 80, 196, 0.9)',
+    borderColor: 'rgba(211, 65, 65, 0.9)',
     hoverBorderWidth: 3,
     hoverBorderColor: 'black',
     pointRadius: 4,
     pointHoverRadius: 5,
-    pointBorderColor:'rgba(78, 60, 156, 0.9)',
-    pointBackgroundColor: 'rgba(252, 255, 237, 0.9)',
+    pointBorderColor:'rgba(145, 0, 0, 0.9)',
+    pointBackgroundColor: 'rgba(252, 255, 237, 0.7)',
     pointHoverBackgroundColor: 'rgba(247, 255, 70, 0.9)'
+
   }
          ]
         },
