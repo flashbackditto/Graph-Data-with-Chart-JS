@@ -4,7 +4,7 @@
   let request = new XMLHttpRequest();
   let API_Key = "9wBvaArNUU45cBCLIDJloq11LmH7nQQcEggnp3J9KFF0Wmm5ypZK8V53locn";
 
-  
+
   request.open('GET',`https://www.worldtradingdata.com/api/v1/history?symbol=AAPL&sort=newest&api_token=${API_Key}`, true);
 
   request.onload = function () {
@@ -12,27 +12,36 @@
 
       let data = JSON.parse(request.response);
       console.log(data);
+
+      chartData = Object.entries(data).slice(1).map(entry => entry[1]);
+      Object.keys(chartData[0]).forEach(function (item) {
+      // console.log(item);
+      console.log(item); // returns only dates
+      });
+
+
+
+
     }
   }
 
+
+
+
   request.send();
+
 
   //Global options
   Chart.defaults.global.defaultFontSize = 15;
 
-  let caPopChart = new Chart(myChart, {
-    type:'bar', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
+  let appleChart = new Chart(myChart, {
+    type:'line', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
     data:{
       labels:['Los Angeles', 'San Diego', 'San Jose', 'San Francisco', 'Fresno', 'Sacramento'],
       datasets:[{
         label:'Population',
         data:[
-        3792621,
-        1307402,
-        945942,
-        805235,
-        494665,
-        466488
+
       ],
       backgroundColor:[
       'red',
