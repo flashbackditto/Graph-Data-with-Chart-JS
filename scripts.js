@@ -7,28 +7,25 @@
 
   request.open('GET',`https://www.worldtradingdata.com/api/v1/history?symbol=AAPL&sort=newest&api_token=${API_Key}`, true);
 
+  let data;
+  let date;
   request.onload = function () {
     if(this.status === 200) {
 
       let data = JSON.parse(request.response);
       console.log(data);
 
-      chartData = Object.entries(data).slice(1).map(entry => entry[1]);
-      Object.keys(chartData[0]).forEach(function (item) {
+      let chartData = Object.entries(data).slice(1).map(entry => entry[1]);
+      Object.keys(chartData[0]).forEach(function (date) {
       // console.log(item);
-      console.log(item); // returns only dates
+      //console.log(date); // returns only dates
       });
-
-
-
-
     }
   }
 
+//Alright, heres what i need to do. Make an api request with global data. Create empty label
+//and data arrays and push dates as a label for chart and dollar value for data.
 
-
-
-  request.send();
 
 
   //Global options
@@ -40,9 +37,7 @@
       labels:['Los Angeles', 'San Diego', 'San Jose', 'San Francisco', 'Fresno', 'Sacramento'],
       datasets:[{
         label:'Population',
-        data:[
-
-      ],
+        data: data,
       backgroundColor:[
       'red',
       'green',
@@ -180,6 +175,8 @@
         }
       }
       });
+
+
 
 
 
