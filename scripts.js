@@ -194,6 +194,27 @@
           labels:['Los Angeles', 'San Diego', 'San Jose', 'San Francisco', 'Fresno', 'Sacramento'],
           datasets:[
             {
+              label:'Median Home Price',
+              data:[
+              525520,
+              623800,
+              989000,
+              1637500,
+              280000,
+              365000
+            ],
+        backgroundColor: 'rgba(33, 186, 94, 0.4)',
+        borderWidth:2,
+        borderColor: 'rgba(40, 167, 108, 0.9)',
+        hoverBorderWidth: 3,
+        hoverBorderColor: 'black',
+        pointRadius: 4,
+        pointHoverRadius: 5,
+        pointBorderColor:'rgba(19, 147, 70, 0.9)',
+        pointBackgroundColor: 'rgba(252, 255, 237, 0.7)',
+        pointHoverBackgroundColor: 'rgba(247, 255, 70, 0.9)'
+      },
+            {
             label:'Median Annual Income',
             data:[
             60197,
