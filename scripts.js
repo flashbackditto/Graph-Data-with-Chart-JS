@@ -189,7 +189,7 @@
       Chart.defaults.global.defaultFontSize = 15;
 
       let rentIncome = new Chart(rentIncomeChart, {
-        type:'doughnut', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
+        type:'line', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
         data:{
           labels:['Los Angeles', 'San Diego', 'San Jose', 'San Francisco', 'Fresno', 'Sacramento'],
           datasets:[
