@@ -189,7 +189,7 @@
       Chart.defaults.global.defaultFontSize = 15;
 
       let rentIncome = new Chart(rentIncomeChart, {
-        type:'line', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
+        type:'doughnut', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
         data:{
           labels:['Los Angeles', 'San Diego', 'San Jose', 'San Francisco', 'Fresno', 'Sacramento'],
           datasets:[
@@ -235,6 +235,27 @@
           pointBackgroundColor: 'rgba(252, 255, 237, 0.9)',
           pointHoverBackgroundColor: 'rgba(247, 255, 70, 0.9)'
       },
+      {
+                label:'Population',
+                data:[
+                  3792621,
+                  1307402,
+                  945942,
+                  805235,
+                  494665,
+                  466488
+              ],
+            backgroundColor: 'rgba(75, 192, 192, 0.3)',
+            borderWidth:2,
+            borderColor: 'rgba(98, 80, 196, 0.9)',
+            hoverBorderWidth: 3,
+            hoverBorderColor: 'black',
+            pointRadius: 4,
+            pointHoverRadius: 5,
+            pointBorderColor:'rgba(78, 60, 156, 0.9)',
+            pointBackgroundColor: 'rgba(252, 255, 237, 0.7)',
+            pointHoverBackgroundColor: 'rgba(247, 255, 70, 0.9)'
+            },
       {
       label:'Average Annual Rent',
       data:[
