@@ -11,22 +11,15 @@
   let date;
   request.onload = function () {
     if(this.status === 200) {
-
       let data = JSON.parse(request.response);
-      console.log(data);
-
-      let chartData = Object.entries(data).slice(1).map(entry => entry[1]);
-      Object.keys(chartData[0]).forEach(function (date) {
-      // console.log(item);
-      //console.log(date); // returns only dates
-      });
+        console.log(data.history);
     }
   }
 
 //Alright, heres what i need to do. Make an api request with global data. Create empty label
 //and data arrays and push dates as a label for chart and dollar value for data.
 
-
+request.send();
 
   //Global options
   Chart.defaults.global.defaultFontSize = 15;
@@ -178,10 +171,6 @@
 
 
 
-
-
-
-
       let rentIncomeChart = document.getElementById('rInChart').getContext('2d');
 
 
@@ -189,7 +178,7 @@
       Chart.defaults.global.defaultFontSize = 15;
 
       let rentIncome = new Chart(rentIncomeChart, {
-        type:'line', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
+        type:'bar', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
         data:{
           labels:['Los Angeles', 'San Diego', 'San Jose', 'San Francisco', 'Fresno', 'Sacramento'],
           datasets:[
