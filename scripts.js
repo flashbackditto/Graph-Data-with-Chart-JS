@@ -25,12 +25,19 @@ request.send();
   Chart.defaults.global.defaultFontSize = 15;
 
   let appleChart = new Chart(myChart, {
-    type:'line', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
+    type:'polarArea', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
     data:{
       labels:['Los Angeles', 'San Diego', 'San Jose', 'San Francisco', 'Fresno', 'Sacramento'],
       datasets:[{
         label:'Population',
-        data: data,
+        data:[
+        525520,
+        623800,
+        989000,
+        1637500,
+        280000,
+        365000
+      ],
       backgroundColor:[
       'red',
       'green',
