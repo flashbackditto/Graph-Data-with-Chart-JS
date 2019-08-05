@@ -1,25 +1,39 @@
 
   let myChart = document.getElementById('myChart').getContext('2d');
 
-  let request = new XMLHttpRequest();
-  let API_Key = "9wBvaArNUU45cBCLIDJloq11LmH7nQQcEggnp3J9KFF0Wmm5ypZK8V53locn";
-
-
-  request.open('GET',`https://www.worldtradingdata.com/api/v1/history?symbol=AAPL&sort=newest&api_token=${API_Key}`, true);
-
-  let data;
-  let date;
-  request.onload = function () {
-    if(this.status === 200) {
-      let data = JSON.parse(request.response);
-        console.log(data.history);
-    }
-  }
+  // let request = new XMLHttpRequest();
+   let API_Key = "9wBvaArNUU45cBCLIDJloq11LmH7nQQcEggnp3J9KFF0Wmm5ypZK8V53locn";
+  //
+  //
+  // request.open('GET',`https://www.worldtradingdata.com/api/v1/history?symbol=AAPL&sort=newest&api_token=${API_Key}`, true);
+  //
+  // let data;
+  // request.onload = function () {
+  //   if(this.status === 200) {
+  //     let data = JSON.parse(request.response);
+  //       console.log(data.history);
+  //   }
+  //   return data.history;
+  // }
 
 //Alright, heres what i need to do. Make an api request with global data. Create empty label
 //and data arrays and push dates as a label for chart and dollar value for data.
 
-request.send();
+// request.send();
+
+let date = [];
+const fetchData = async() =>
+{
+  let response = await fetch(`https://www.worldtradingdata.com/api/v1/history?symbol=AAPL&sort=newest&api_token=${API_Key}`)
+  let data = await response.json();
+  console.log(data);
+
+  data.foreach( obj => date.push(data.history));
+}
+
+fetchData();
+
+console.log(date);
 
   //Global options
   Chart.defaults.global.defaultFontSize = 15;
