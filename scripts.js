@@ -21,19 +21,23 @@
 
 // request.send();
 
-let date = [];
+
 const fetchData = async() =>
 {
   let response = await fetch(`https://www.worldtradingdata.com/api/v1/history?symbol=AAPL&sort=newest&api_token=${API_Key}`)
   let data = await response.json();
   console.log(data);
+  let date = [];
+  Object.keys(data.history).forEach( function (obj) {
+    console.log(obj);
+  });
 
-  data.foreach( obj => date.push(data.history));
-}
+};
+
 
 fetchData();
 
-console.log(date);
+
 
   //Global options
   Chart.defaults.global.defaultFontSize = 15;
